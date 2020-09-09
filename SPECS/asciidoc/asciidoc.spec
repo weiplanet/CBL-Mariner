@@ -1,7 +1,7 @@
 Summary:        AsciiDoc is a human readable text document format
 Name:           asciidoc
 Version:        8.6.10
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv2
 URL:            http://asciidoc.org/
 Group:          System Environment/Development
@@ -40,6 +40,13 @@ make %{?_smp_mflags}
 rm -rf %{buildroot}%{_infodir}
 make DESTDIR=%{buildroot} install
 
+mkdir %{buildroot}%{_datadir}/asciidoc
+
+for d in dblatex docbook-xsl images javascripts stylesheets; do
+    ln -s %{_sysconfdir}/asciidoc/$d %{buildroot}%{_datadir}/asciidoc/$d
+done
+
+    
 %check
 python tests/testasciidoc.py update
 python tests/testasciidoc.py run
@@ -53,8 +60,12 @@ python tests/testasciidoc.py run
 %{_bindir}/*
 %{_sysconfdir}/*
 %{_mandir}/*
+%{_datadir}/*
 
 %changelog
+* Tue Sep 08 2020 Ruying Chen <v-ruyche@microsoft.com> - 8.6.10-5
+- Add symlinks to datadir
+
 * Sat May 09 00:21:18 PST 2020 Nick Samson <nisamson@microsoft.com> - 8.6.10-4
 - Added %%license line automatically
 
