@@ -200,6 +200,8 @@ cp -v $MARINER_TOOLCHAIN_MANIFESTS_DIR/macros.override $LFS/usr/lib/rpm/macros.d
 chmod +x $LFS/usr/lib/rpm/brp*
 cp /etc/resolv.conf $LFS/etc/
 
+# cp -r ~/Desktop/toolchain_rpms_openssl/* $CHROOT_RPMS_DIR/
+
 echo Building final list of toolchain RPMs
 build_rpm_in_chroot_no_install mariner-rpm-macros
 copy_rpm_subpackage mariner-check-macros
@@ -265,14 +267,26 @@ build_rpm_in_chroot_no_install perl-DBIx-Simple
 build_rpm_in_chroot_no_install elfutils
 build_rpm_in_chroot_no_install automake
 
-# Need to install perl-Text-Template and perl-Test-Warnings
+# Need to install libtool, automake, autoconf to build lksctp-tools
+chroot_and_install_rpms libtool
+chroot_and_install_rpms automake
+chroot_and_install_rpms autoconf
+build_rpm_in_chroot_no_install lksctp-tools
+
+# Need to install perl-Text-Template, perl-Test-Warnings, and lksctp-tools
 # to build openssl
 build_rpm_in_chroot_no_install perl-Test-Warnings
 chroot_and_install_rpms perl-Test-Warnings
 build_rpm_in_chroot_no_install perl-Text-Template
 chroot_and_install_rpms perl-Text-Template
+chroot_and_install_rpms lksctp-tools
+chroot_and_install_rpms coreutils
+chroot_and_install_rpms sed
+chroot_and_install_rpms zlib
+chroot_and_install_rpms diffutils
+chroot_and_install_rpms util-linux
+chroot_and_install_rpms procp-ng
 build_rpm_in_chroot_no_install openssl
-
 build_rpm_in_chroot_no_install wget
 build_rpm_in_chroot_no_install freetype
 
@@ -387,7 +401,7 @@ build_rpm_in_chroot_no_install npth
 build_rpm_in_chroot_no_install libksba
 
 # gnupg2 requires zlib, bzip2, readline, npth, libassuan, libksba
-chroot_and_install_rpms zlib
+# chroot_and_install_rpms zlib
 chroot_and_install_rpms bzip2
 chroot_and_install_rpms readline
 chroot_and_install_rpms npth
@@ -454,7 +468,7 @@ chroot_and_install_rpms libcap
 chroot_and_install_rpms xz
 chroot_and_install_rpms kbd
 chroot_and_install_rpms kmod
-chroot_and_install_rpms util-linux
+# chroot_and_install_rpms util-linux
 chroot_and_install_rpms meson
 chroot_and_install_rpms shadow-utils
 build_rpm_in_chroot_no_install systemd-bootstrap
