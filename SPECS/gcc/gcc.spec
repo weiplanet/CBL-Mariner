@@ -9,7 +9,7 @@ URL:            https://gcc.gnu.org/
 Group:          Development/Tools
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
-Source0:        https://microsoft-my.sharepoint.com/:u:/p/vitong/EZo_ECnHf-ZHhHwLLzZh290BCVIDexLsvPUUqj4T_E-L_g?e=Q0wuhB
+Source0:        http://0.0.0.0:8998/gcc-9.1.0.tar.xz
 #Source0:        https://ftp.gnu.org/gnu/gcc/%{name}-%{version}/%{name}-%{version}.tar.xz
 Patch0:         090_all_pr55930-dependency-tracking.patch
 Requires:       libstdc++-devel = %{version}-%{release}
