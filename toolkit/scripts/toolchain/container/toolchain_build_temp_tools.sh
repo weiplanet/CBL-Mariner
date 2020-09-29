@@ -37,6 +37,8 @@ touch $LFS/logs/temptoolchain/status_binutils_pass1_complete
 
 echo GCC-9.1.0 - Pass 1
 tar xf gcc-9.1.0.tar.xz
+dir
+pwd
 pushd gcc-9.1.0
 tar xf ../mpfr-4.0.1.tar.xz
 mv -v mpfr-4.0.1 mpfr
