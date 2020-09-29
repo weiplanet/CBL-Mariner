@@ -5,7 +5,7 @@
 
 Name:           dracut
 Version:        049
-Release:        2%{?dist}
+Release:        3%{?dist}
 Group:          System Environment/Base
 # The entire source code is GPLv2+
 # except install/* which is LGPLv2+
@@ -15,6 +15,14 @@ Source0:        http://www.kernel.org/pub/linux/utils/boot/dracut/dracut-%{versi
 Source1:        https://www.gnu.org/licenses/lgpl-2.1.txt
 Patch1:         disable-xattr.patch
 Patch2:         fix-initrd-naming-for-mariner.patch
+Patch3:         0002.patch
+Patch4:         0012.patch
+Patch5:         0013.patch
+Patch6:         0015.patch
+Patch7:         0027.patch
+Patch8:         0028.patch
+Patch9:         0029.patch
+Patch10:        0030.patch
 Summary:        dracut to create initramfs
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -31,6 +39,9 @@ Requires:       /bin/sed
 Requires:       /bin/grep
 Requires:       findutils
 Requires:       cpio
+Requires:       libkcapi-hmaccalc
+Provides:       dracut-fips = %{version}-%{release}
+
 
 %description
 dracut contains tools to create a bootable initramfs for 2.6 Linux kernels.
@@ -51,6 +62,14 @@ This package contains tools to assemble the local initrd and host configuration.
 cp %{SOURCE1} .
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
+%patch9 -p1
+%patch10 -p1
 
 %build
 %configure --systemdsystemunitdir=%{_unitdir} --bashcompletiondir=$(pkg-config --variable=completionsdir bash-completion) \
@@ -66,8 +85,8 @@ make %{?_smp_mflags} install \
 
 echo "DRACUT_VERSION=%{version}-%{release}" > $RPM_BUILD_ROOT/%{dracutlibdir}/dracut-version.sh
 
-rm -fr -- $RPM_BUILD_ROOT/%{dracutlibdir}/modules.d/01fips
-rm -fr -- $RPM_BUILD_ROOT/%{dracutlibdir}/modules.d/02fips-aesni
+#rm -fr -- $RPM_BUILD_ROOT/%%{dracutlibdir}/modules.d/01fips
+#rm -fr -- $RPM_BUILD_ROOT/%%{dracutlibdir}/modules.d/02fips-aesni
 
 rm -fr -- $RPM_BUILD_ROOT/%{dracutlibdir}/modules.d/00bootchart
 
@@ -157,6 +176,8 @@ rm -rf -- $RPM_BUILD_ROOT
 %dir /var/lib/dracut/overlay
 
 %changelog
+*   Tue Sep 29 2020 Ruying Chen <v-ruyche@microsoft.com> 049-3
+-   Update FIPS module.
 *   Wed Apr 08 2020 Nicolas Ontiveros <niontive@microsoft.com> 049-2
 -   Remove toybox from requires.
 *   Thu Mar 26 2020 Nicolas Ontiveros <niontive@microsoft.com> 049-1
