@@ -85,9 +85,6 @@ make %{?_smp_mflags} install \
 
 echo "DRACUT_VERSION=%{version}-%{release}" > $RPM_BUILD_ROOT/%{dracutlibdir}/dracut-version.sh
 
-#rm -fr -- $RPM_BUILD_ROOT/%%{dracutlibdir}/modules.d/01fips
-#rm -fr -- $RPM_BUILD_ROOT/%%{dracutlibdir}/modules.d/02fips-aesni
-
 rm -fr -- $RPM_BUILD_ROOT/%{dracutlibdir}/modules.d/00bootchart
 
 # we do not support dash in the initramfs

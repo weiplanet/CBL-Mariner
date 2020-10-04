@@ -81,15 +81,9 @@ Patch56: openssl-1.1.1-s390x-ecc.patch
 License: OpenSSL and ASL 2.0
 URL: http://www.openssl.org/
 BuildRequires: gcc
-BuildRequires: coreutils, sed, zlib-devel, /usr/bin/cmp
-# Mariner change: use perl in chroot
-#BuildRequires: perl-interpreter
+BuildRequires: coreutils, sed, zlib-devel, diffutils
 BuildRequires: lksctp-tools-devel
-# Mariner change: util-linux doesn't have /usr/bin/rename
-#BuildRequires: /usr/bin/rename
-# Mariner change: build without perl-podlators
-#BuildRequires: /usr/bin/pod2man
-#BuildRequires: /usr/sbin/sysctl
+BuildRequires: util-linux
 BuildRequires: procps-ng
 BuildRequires: perl(Test::Harness), perl(Test::More), perl(Math::BigInt)
 BuildRequires: perl(Module::Load::Conditional), perl(File::Temp)
@@ -106,13 +100,8 @@ protocols.
 
 %package libs
 Summary: A general purpose cryptography library with TLS implementation
-# Mariner change: temporarily remove runtime require for ca-certificate and 
-# crypto-policies to avoid cyclic dependencies
-#Requires: ca-certificates >= 2008-5
-#Requires: crypto-policies >= 20180730
 Recommends: openssl-pkcs11%{?_isa}
 # Needed obsoletes due to the base/lib subpackage split
-# Mariner change: remove all epoch numbers
 Obsoletes: openssl < 1.0.1-0.3.beta3
 Obsoletes: openssl-fips < 1.0.1e-28
 Provides: openssl-fips = %{version}-%{release}
@@ -125,9 +114,6 @@ support cryptographic algorithms and protocols.
 %package devel
 Summary: Files for development of applications which will use OpenSSL
 Requires: %{name}-libs%{?_isa} = %{version}-%{release}
-# Mariner change: temporarily remove runtime require krb5-devel to 
-# avoid cyclic dependency issue
-#Requires: krb5-devel%%{?_isa}
 Requires: zlib-devel%{?_isa}
 Requires: pkg-config
 
@@ -148,7 +134,6 @@ protocols.
 
 %package perl
 Summary: Perl scripts provided with OpenSSL
-# Mariner change: perl-interpreter --> perl
 Requires: perl
 Requires: %{name}%{?_isa} = %{version}-%{release}
 
