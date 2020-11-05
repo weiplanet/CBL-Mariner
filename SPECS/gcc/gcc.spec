@@ -10,6 +10,9 @@ Group:          Development/Tools
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
 Source0:        http://0.0.0.0:8998/gcc-9.1.0.tar.xz
+#Source0:        /home/vitong/git/CBL-Mariner/SPECS/gcc/gcc-cppteam-9.1.0.tar.xz
+#Source0:        /home/vitong/git/CBL-Mariner/SPECS/gcc/gcc-cppteam-9.1.0.tar.xz
+#Source0:        http://0.0.0.0:8998/gcc-cppteam-9.1.0.tar.xz
 #Source0:        https://ftp.gnu.org/gnu/gcc/%{name}-%{version}/%{name}-%{version}.tar.xz
 Patch0:         090_all_pr55930-dependency-tracking.patch
 Requires:       libstdc++-devel = %{version}-%{release}
