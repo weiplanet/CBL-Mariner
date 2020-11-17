@@ -17,7 +17,7 @@ BuildRequires:		autogen
 BuildRequires:		autoconf
 BuildRequires:		automake
 BuildRequires:		libtool
-BuildRequires:		gcc
+BuildRequires:		gcc-cppteam
 BuildRequires:		systemd
 
 %description

@@ -36,10 +36,10 @@ rm -rf binutils-2.32
 touch $LFS/logs/temptoolchain/status_binutils_pass1_complete
 
 echo GCC-9.1.0 - Pass 1
-tar xf gcc-9.1.0.tar.xz
+tar xf gcc-cppteam-9.1.0.tar.xz
 dir
 pwd
-pushd gcc-9.1.0
+pushd gcc-cppteam-9.1.0
 tar xf ../mpfr-4.0.1.tar.xz
 mv -v mpfr-4.0.1 mpfr
 tar xf ../gmp-6.1.2.tar.xz
@@ -111,7 +111,7 @@ cd       build
 make -j$(nproc)
 make install
 popd
-rm -rf gcc-9.1.0
+rm -rf gcc-cppteam-9.1.0
 
 touch $LFS/logs/temptoolchain/status_gcc_pass1_complete
 
@@ -165,8 +165,8 @@ rm -rf glibc-2.28
 touch $LFS/logs/temptoolchain/status_glibc_complete
 
 echo Libstdc++ from GCC-9.1.0
-tar xf gcc-9.1.0.tar.xz
-pushd gcc-9.1.0
+tar xf gcc-cppteam-9.1.0.tar.xz
+pushd gcc-cppteam-9.1.0
 mkdir -v build
 cd       build
 ../libstdc++-v3/configure           \
@@ -180,7 +180,7 @@ cd       build
 make -j$(nproc)
 make install
 popd
-rm -rf gcc-9.1.0
+rm -rf gcc-cppteam-9.1.0
 
 touch $LFS/logs/temptoolchain/status_libstdc++_complete
 
@@ -209,8 +209,8 @@ rm -rf binutils-2.32
 touch $LFS/logs/temptoolchain/status_binutils_pass2_complete
 
 echo GCC-9.1.0 - Pass 2
-tar xf gcc-9.1.0.tar.xz
-pushd gcc-9.1.0
+tar xf gcc-cppteam-9.1.0.tar.xz
+pushd gcc-cppteam-9.1.0
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include-fixed/limits.h
 case $(uname -m) in
@@ -294,7 +294,7 @@ rm -v dummy.c a.out
 set -e
 echo End sanity check - temptoolchain - gcc 9.1.0 pass2
 popd
-rm -rf gcc-9.1.0
+rm -rf gcc-cppteam-9.1.0
 
 touch $LFS/logs/temptoolchain/status_gcc_pass2_complete
 

@@ -12,7 +12,7 @@ Source0:        %{name}-%{version}.tar.gz
 Source1:        %{name}-%{version}-cargo.tar.gz
 ExclusiveArch:  x86_64
 
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  glibc-devel
 BuildRequires:  binutils
 BuildRequires:  rust

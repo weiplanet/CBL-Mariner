@@ -14,7 +14,7 @@ Source0:        %{name}-%{name}-%{version}.tar.gz
 Patch1:         50.patch
 
 BuildRequires:  cmake
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  libxml2-devel
 BuildRequires:  check
 BuildRequires:  expat-devel

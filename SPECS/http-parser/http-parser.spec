@@ -9,7 +9,7 @@ Source0:        %{name}-%{version}.tar.gz
 Group:          Development/Tools
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 
 %description
 This is a parser for HTTP messages written in C. It parses both requests and responses. The parser is designed to be used in performance HTTP applications. It does not make any syscalls nor allocations, it does not buffer data, it can be interrupted at anytime.

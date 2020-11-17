@@ -10,7 +10,7 @@ Vendor:         Microsoft Corporation
 Distribution:   Mariner
 Source0:        https://github.com/mesonbuild/meson/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  python3-devel
 BuildRequires:  python3-xml
 BuildRequires:  python3-libs

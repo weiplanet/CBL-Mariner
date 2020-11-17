@@ -11,7 +11,7 @@ Source0:        %{name}-%{version}.tar.gz
 
 ExclusiveArch:  x86_64
 
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  gnu-efi

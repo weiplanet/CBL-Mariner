@@ -26,7 +26,7 @@ libstdc++-9.1.0-6.cm1.x86_64.rpm
 libstdc++-devel-9.1.0-6.cm1.x86_64.rpm
 libgomp-9.1.0-6.cm1.x86_64.rpm
 libgomp-devel-9.1.0-6.cm1.x86_64.rpm
-gcc-9.1.0-6.cm1.x86_64.rpm
+gcc-cppteam-9.1.0-6.cm1.x86_64.rpm
 pkg-config-0.29.2-4.cm1.x86_64.rpm
 ncurses-6.2-4.cm1.x86_64.rpm
 ncurses-compat-6.2-4.cm1.x86_64.rpm

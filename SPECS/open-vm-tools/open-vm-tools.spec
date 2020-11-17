@@ -50,7 +50,7 @@ BuildRequires:    autoconf
 BuildRequires:    automake
 BuildRequires:    libtool
 # This used to be gcc-c++ because it probably needs gcc-libstdc++-devel
-BuildRequires:    gcc
+BuildRequires:    gcc-cppteam
 
 #BuildRequires:    doxygen
 # Fuse is optional and enables vmblock-fuse

@@ -14,7 +14,7 @@ BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  cmake
 BuildRequires:  make
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 
 %description
 Google's C++ test framework that combines the GoogleTest and GoogleMock projects. This package provides gtest shared libraries.

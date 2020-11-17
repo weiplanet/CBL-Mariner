@@ -28,7 +28,7 @@ Patch13: libcgroup-0.41-fix-log-level.patch
 Patch14: libcgroup-0.41-size-of-controller-values.patch
 Patch15: libcgroup-0.41-CVE-2018-14348.patch
 
-BuildRequires: gcc
+BuildRequires: gcc-cppteam
 BuildRequires: coreutils
 BuildRequires: flex
 BuildRequires: pam-devel

@@ -9,7 +9,7 @@ Vendor:         Microsoft Corporation
 Distribution:   Mariner
 #Source0:       https://github.com/lm-sensors/lm-sensors/archive/V3-5-0.tar.gz
 Source0:        %{name}-%{version}.tar.gz
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  bison
 BuildRequires:  flex
 BuildRequires:  make

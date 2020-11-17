@@ -12,7 +12,7 @@ Distribution:   Mariner
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  make
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  libgcc
 BuildRequires:  libtool
 

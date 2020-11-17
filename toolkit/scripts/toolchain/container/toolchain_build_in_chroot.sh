@@ -307,8 +307,8 @@ rm -rf mpc-1.1.0
 touch /logs/status_libmpc_complete
 
 echo GCC-9.1.0
-tar xf gcc-9.1.0.tar.xz
-pushd gcc-9.1.0
+tar xf gcc-cppteam-9.1.0.tar.xz
+pushd gcc-cppteam-9.1.0
 case $(uname -m) in
   x86_64)
     sed -e '/m64=/s/lib64/lib/' \
@@ -406,7 +406,7 @@ set -e
 mkdir -pv /usr/share/gdb/auto-load/usr/lib
 mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 popd
-rm -rf gcc-9.1.0
+rm -rf gcc-cppteam-9.1.0
 
 touch /logs/status_gcc_complete
 

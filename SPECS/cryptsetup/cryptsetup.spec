@@ -12,7 +12,7 @@ URL:            https://gitlab.com/cryptsetup/cryptsetup
 Source0:        https://www.kernel.org/pub/linux/utils/cryptsetup/v%{urlversion}/%{name}-%{version}.tar.xz
 Patch0:         cryptsetup-add-system-library-paths.patch
 BuildRequires:  openssl-devel, popt-devel, device-mapper-devel
-BuildRequires:  gcc, util-linux
+BuildRequires:  gcc-cppteam, util-linux
 BuildRequires:  libpwquality-devel, json-c-devel
 Provides:       cryptsetup-luks = %{version}-%{release}
 Requires:       cryptsetup-libs = %{version}-%{release}

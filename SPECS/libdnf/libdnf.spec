@@ -17,7 +17,7 @@ URL:            https://github.com/rpm-software-management/libdnf
 Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  glib-devel
 BuildRequires:  libsolv-devel
 BuildRequires:  librepo-devel

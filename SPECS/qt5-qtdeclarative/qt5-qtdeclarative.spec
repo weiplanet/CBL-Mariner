@@ -18,7 +18,7 @@ Source0: https://download.qt.io/official_releases/qt/%{majmin}/%{version}/submod
 # filter qml provides
 %global __provides_exclude_from ^%{_qt5_archdatadir}/qml/.*\\.so$
 
-BuildRequires: gcc
+BuildRequires: gcc-cppteam
 # qt macros
 BuildRequires: qt5-qtbase-devel >= %{version}
 BuildRequires: qt5-qtbase-private-devel

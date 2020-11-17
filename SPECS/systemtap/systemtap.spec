@@ -44,7 +44,7 @@ BuildRequires: pkg-config
 %if %with_rpm
 BuildRequires: rpm-devel
 %endif
-Requires:      gcc
+Requires:      gcc-cppteam
 Requires:      kernel-devel
 Requires:      make
 Requires:      elfutils

@@ -35,7 +35,7 @@ Patch7:  inline.patch
 # a couple of weeks ago.
 Patch8:  gcc10.patch
 
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires: zlib-devel
 BuildRequires: xz-devel
 BuildRequires: lzo-devel

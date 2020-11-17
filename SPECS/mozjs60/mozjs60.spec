@@ -20,7 +20,7 @@ Patch6:        icu_sources_data-Write-command-output-to-our-stderr.patch
 Distribution:  Mariner
 
 BuildRequires:  autoconf213
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  perl
 BuildRequires:  libffi
 BuildRequires:  zlib

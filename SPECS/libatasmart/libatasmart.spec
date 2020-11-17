@@ -9,7 +9,7 @@ Url:            https://git.0pointer.net/libatasmart.git/
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
 
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  systemd-devel
 
 %description

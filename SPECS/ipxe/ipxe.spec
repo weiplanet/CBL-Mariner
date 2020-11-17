@@ -16,7 +16,7 @@ ExclusiveArch:  x86_64
 BuildRequires:  binutils
 BuildRequires:  binutils-devel
 BuildRequires:  cdrkit
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  libgcc
 BuildRequires:  libgcc-devel
 BuildRequires:  make

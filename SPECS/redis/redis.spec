@@ -10,7 +10,7 @@ Distribution:   Mariner
 Source0:	http://download.redis.io/releases/%{name}-%{version}.tar.gz
 %define sha1 redis=71e38ae09ac70012b5bc326522b976bcb8e269d6
 Patch0:         redis-conf.patch
-BuildRequires:  gcc
+BuildRequires:  gcc-cppteam
 BuildRequires:  systemd
 BuildRequires:  make
 BuildRequires:  which
