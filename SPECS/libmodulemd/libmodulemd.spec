@@ -13,7 +13,7 @@ Distribution:   Mariner
 
 BuildRequires:  meson
 BuildRequires:  clang-devel
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  glib
 BuildRequires:  valgrind
 BuildRequires:  gobject-introspection-devel

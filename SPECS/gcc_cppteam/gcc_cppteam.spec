@@ -1,7 +1,7 @@
 %global security_hardening nofortify
 %define _use_internal_dependency_generator 0
 Summary:        Contains the GNU compiler collection
-Name:           gcc-cppteam
+Name:           gcc_cppteam
 Version:        9.1.0
 Release:        6%{?dist}
 License:        GPLv2+
@@ -9,7 +9,7 @@ URL:            https://gcc.gnu.org/
 Group:          Development/Tools
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
-Source0:        http://0.0.0.0:8998/gcc-cppteam-9.1.0.tar.xz
+Source0:        http://0.0.0.0:8998/gcc_cppteam-9.1.0.tar.xz
 #Source0:        https://ftp.gnu.org/gnu/gcc/%{name}-%{version}/%{name}-%{version}.tar.xz
 Patch0:         090_all_pr55930-dependency-tracking.patch
 Requires:       libstdc++-devel = %{version}-%{release}

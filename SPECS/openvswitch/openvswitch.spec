@@ -12,7 +12,7 @@ Distribution:   Mariner
 
 Source0:        http://openvswitch.org/releases/%{name}-%{version}.tar.gz
 
-BuildRequires:  gcc-cppteam >= 4.0.0
+BuildRequires:  gcc_cppteam >= 4.0.0
 BuildRequires:  libcap-ng
 BuildRequires:  libcap-ng-devel
 BuildRequires:  make

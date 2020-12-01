@@ -17,7 +17,7 @@ Requires:	glibc >= 2.7
 Requires:	bzip2-libs
 # ExcludeArch: xxx
 
-BuildRequires:	gcc-cppteam >= 4.1.2-33
+BuildRequires:	gcc_cppteam >= 4.1.2-33
 BuildRequires:	glibc >= 2.7
 BuildRequires:	bison >= 1.875
 BuildRequires:	flex >= 2.5.4a

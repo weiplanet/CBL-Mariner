@@ -48,7 +48,7 @@ Distribution: Mariner
 
 BuildRequires: build-essential
 BuildRequires: systemd
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: make
 BuildRequires: which
 

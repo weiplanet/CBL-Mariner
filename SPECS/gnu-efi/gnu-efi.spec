@@ -9,7 +9,7 @@ Distribution:   Mariner
 Source:         https://gigenet.dl.sourceforge.net/project/gnu-efi/gnu-efi-%{version}.tar.bz2
 Source1:        LICENSE.PTR
 
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: glibc-devel
 
 %define lib %{nil}lib%{nil}

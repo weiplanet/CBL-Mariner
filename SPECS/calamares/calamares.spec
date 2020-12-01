@@ -65,7 +65,7 @@ Requires:  freefont
 # Compilation tools
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  pkg-config
 
 

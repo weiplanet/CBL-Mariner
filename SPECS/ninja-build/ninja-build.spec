@@ -10,7 +10,7 @@ Distribution:   Mariner
 Source0:        ninja-%{version}.tar.gz
 Source1:        macros.ninja
 
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  python3-devel
 BuildRequires:  gtest-devel
 

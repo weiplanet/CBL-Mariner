@@ -23,7 +23,7 @@ BuildRequires:  gawk
 BuildRequires:  which
 BuildRequires:  libstdc++
 BuildRequires:  libstdc++-devel
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  libgcc
 BuildRequires:  libgcc-devel
 BuildRequires:  glibc

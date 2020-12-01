@@ -3,7 +3,7 @@ Summary:        Metapackage to install all build tools
 Version:        0.1
 Release:        4%{?dist}
 License:        GPLv2
-Requires:       gcc-cppteam, binutils, make, glibc-devel, kernel-headers, automake
+Requires:       gcc_cppteam, binutils, make, glibc-devel, kernel-headers, automake
 Requires:       autoconf, libtool, gawk, diffutils, patch, bison
 
 %description

@@ -18,7 +18,7 @@ BuildRequires:   bison
 BuildRequires:   cmake >= 2.8.7
 BuildRequires:   flex
 BuildRequires:   make
-BuildRequires:   gcc-cppteam
+BuildRequires:   gcc_cppteam
 BuildRequires:   libstdc++
 BuildRequires:   elfutils-libelf
 BuildRequires:   elfutils-libelf-devel-static

@@ -214,7 +214,7 @@ build_rpm_in_chroot_no_install binutils
 build_rpm_in_chroot_no_install gmp
 build_rpm_in_chroot_no_install mpfr
 build_rpm_in_chroot_no_install libmpc
-build_rpm_in_chroot_no_install gcc-cppteam
+build_rpm_in_chroot_no_install gcc_cppteam
 build_rpm_in_chroot_no_install pkg-config
 build_rpm_in_chroot_no_install ncurses
 build_rpm_in_chroot_no_install readline

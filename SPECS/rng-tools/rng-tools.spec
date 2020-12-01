@@ -12,7 +12,7 @@ Source0:        https://github.com/nhorman/%{name}/archive/%{name}-%{version}.ta
 Source1:        rngd.service
 Source2:        LICENSE.PTR
 BuildRequires:  systemd
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  make
 
 Requires:       systemd

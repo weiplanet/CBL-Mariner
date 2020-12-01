@@ -17,7 +17,7 @@ BuildRequires: coreutils
 BuildRequires: tar
 BuildRequires: diffutils
 BuildRequires: make
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: binutils
 BuildRequires: kernel-headers
 BuildRequires: sed

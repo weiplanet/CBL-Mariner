@@ -9,7 +9,7 @@ Vendor:        Microsoft Corporation
 Distribution:  Mariner
 Source0:       https://kernel.org/pub/software/utils/%{name}/%{name}-%{version}.tar.gz
 
-BuildRequires: gcc-cppteam make
+BuildRequires: gcc_cppteam make
 BuildRequires: flex bison swig
 
 %description

@@ -19,7 +19,7 @@ Source0:       https://github.com/libpwquality/libpwquality/releases/download/%{
 
 Recommends:    cracklib-dicts >= 2.8
 Requires:      pam
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: cracklib-devel
 BuildRequires: gettext
 BuildRequires: pam-devel

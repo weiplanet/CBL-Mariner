@@ -20,7 +20,7 @@ Patch5:         CVE-2019-6285.nopatch
 Patch6:         CVE-2019-6292.nopatch
 
 BuildRequires: cmake
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 
 %description
 yaml-cpp is a YAML parser and emitter in C++ written around the YAML 1.2 spec.

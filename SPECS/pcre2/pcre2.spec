@@ -14,7 +14,7 @@ BuildRequires:  zlib-devel
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  coreutils
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  libtool
 BuildRequires:  make
 BuildRequires:  bzip2-devel

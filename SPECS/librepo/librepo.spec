@@ -15,7 +15,7 @@ Distribution:   Mariner
 Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 BuildRequires:  check
 BuildRequires:  glib-devel
 BuildRequires:  gpgme-devel

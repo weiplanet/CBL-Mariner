@@ -27,7 +27,7 @@ BuildRequires: bash
 BuildRequires: btrfs-progs-devel
 BuildRequires: cmake
 BuildRequires: device-mapper-devel
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: glibc-devel
 BuildRequires: libseccomp-devel
 BuildRequires: libselinux-devel

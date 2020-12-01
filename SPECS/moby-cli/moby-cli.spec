@@ -19,7 +19,7 @@ Distribution: Mariner
 
 BuildRequires: golang
 BuildRequires: bash
-BuildRequires: gcc-cppteam
+BuildRequires: gcc_cppteam
 BuildRequires: libltdl-devel
 BuildRequires: make
 BuildRequires: git

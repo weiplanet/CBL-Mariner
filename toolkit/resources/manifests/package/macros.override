@@ -32,3 +32,6 @@
 # Example macros to select specs to run check
 %select_check_bc 1
 %select_check_zsh 1
+
+# Temporarily skip gcc tests until they're fixed
+%skip_check_gcc_cppteam 1

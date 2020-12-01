@@ -38,7 +38,7 @@ ExclusiveArch:  x86_64
 Requires:       hypervkvpd = %{version}-%{release}
 Requires:       hypervvssd = %{version}-%{release}
 Requires:       hypervfcopyd = %{version}-%{release}
-BuildRequires:  gcc-cppteam
+BuildRequires:  gcc_cppteam
 
 %description
 Suite of daemons that are needed when Linux guest
