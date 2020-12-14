@@ -5,7 +5,6 @@ Name:           crypto-policies
 Version:        %{git_date}
 Release:        2.git%{git_commit_hash}%{?dist}
 Summary:        Systemwide crypto policies
-
 License:        LGPLv2+
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -21,14 +20,7 @@ BuildRequires: asciidoc
 BuildRequires: libxslt
 BuildRequires: openssl
 BuildRequires: gnutls
-# Mariner change: build without openjdk8
-#BuildRequires: java-1.8.0-openjdk-devel
-#BuildRequires: openjdk8
-# Mariner change: name compat change bind to bind-utils
 BuildRequires: bind-utils
-# Mariner change: use Mariner perl in chroot instead
-#BuildRequires: perl-interpreter
-#BuildRequires: perl-generators
 BuildRequires: perl-File-pushd, perl(File::Temp), perl(File::Copy)
 BuildRequires: perl-File-Which
 BuildRequires: python3-devel
@@ -40,9 +32,9 @@ Requires: sed
 Requires(post): coreutils
 Requires(post): grep
 Requires(post): sed
-Conflicts: nss < 3.44.0
-Conflicts: libreswan < 3.28
-Conflicts: openssh < 8.0p1
+# Conflicts: nss < 3.44.0
+# Conflicts: libreswan < 3.28
+# Conflicts: openssh < 8.0p1
 # used by fips-mode-setup
 Recommends: grubby
 
@@ -118,7 +110,10 @@ make check %{?_smp_mflags}
 
 %changelog
 * Tue Sep 08 2020 Ruying Chen <v-ruyche@microsoft.com> - 20190807-2.git9b1477b
-- Initial import from CentOS 8
+- Initial import from CentOS 8.
+- Rename bind to bind-utils.
+- Remove openjdk, java-devel, perl-interpreter and perl-generator build requirements.
+- Comment out conflict with nss < 3.44.0 for image testing.
 
 * Wed Aug  7 2019 Tomáš Mráz <tmraz@redhat.com> - 20190807-1.git9b1477b
 - gnutls: enable TLS-1.3 in the FIPS policy
