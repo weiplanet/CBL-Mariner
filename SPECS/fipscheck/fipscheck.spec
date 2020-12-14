@@ -1,7 +1,7 @@
 Summary:	A library for integrity verification of FIPS validated modules
 Name:		fipscheck
 Version:	1.5.0
-Release:	4%{?dist}
+Release:	5%{?dist}
 License:	BSD
 Group:		System Environment/Libraries
 # This is a Red Hat maintained package which is specific to
@@ -92,6 +92,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Tue Sep 29 2020 Ruying Chen <v-ruyche@microsoft.com> - 1.5.0-5
+- Initial import from Fedora 32
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.5.0-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 

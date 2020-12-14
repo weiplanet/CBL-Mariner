@@ -92,7 +92,7 @@ bin/kcapi-hasher -n fipshmac -d "$lib_path"/fipscheck            \\\
 
 Name:           libkcapi
 Version:        %{vmajor}.%{vminor}.%{vpatch}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        User space interface to the Linux Kernel Crypto API
 
 License:        BSD or GPLv2
@@ -104,8 +104,6 @@ Patch100:       100-workaround-cppcheck-bug.patch
 
 BuildRequires:  clang
 BuildRequires:  coreutils
-#BuildRequires:  cppcheck
-#BuildRequires:  docbook-utils-pdf
 BuildRequires:  gcc
 BuildRequires:  git
 BuildRequires:  hardlink
@@ -441,6 +439,10 @@ popd
 
 
 %changelog
+* Tue Sep 29 2020 Ruying Chen <v-ruyche@microsoft.com> - 1.1.5-3
+- Initial import from Fedora32
+- Build without cppcheck and docbook-utils-pdf
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
