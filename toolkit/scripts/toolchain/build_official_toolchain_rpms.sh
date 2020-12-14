@@ -335,7 +335,12 @@ build_rpm_in_chroot_no_install intltool
 build_rpm_in_chroot_no_install check
 build_rpm_in_chroot_no_install e2fsprogs
 
-# libgcrypt needs libgpg-error
+# fipscheck needs openssl
+chroot_and_install_rpms openssl
+
+# libgcrypt needs fipscheck and libgpg-error
+build_rpm_in_chroot_no_install fipscheck
+chroot_and_install_rpms fipscheck
 chroot_and_install_rpms libgpg-error
 build_rpm_in_chroot_no_install libgcrypt
 build_rpm_in_chroot_no_install kbd
