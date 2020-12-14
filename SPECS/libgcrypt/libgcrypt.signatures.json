@@ -1,5 +1,11 @@
 {
  "Signatures": {
-  "libgcrypt-1.8.3.tar.bz2": "66ec90be036747602f2b48f98312361a9180c97c68a690a5f376fa0f67d0af7c"
+  "curves.c": "bb012228f4957287ede2d621c2e394e8aa0282edfe247d55021400e1514ac7c3",
+  "ecc-curves.c": "6bdb3af59ba93404eae5499fe16a65c7e2d56c8b2f6a42030ed8e72fa0c6db50",
+  "hobble-libgcrypt": "5d76e249a8a92c19472dbf5440033d014406667ecccc5370503c80b569b075a0",
+  "libgcrypt-1.8.3-hobbled.tar.xz": "690660f1fc97d4a5cdeea47f63eab626b8b98d1c84595bccaea6b0b666734df7",
+  "random.conf": "639bd7d4df19f8e810433e7158f2e2c0b8d8034b9276562f255dd13b108403e5",
+  "t-mpi-point.c": "eded087ec96a2528e6950be355be1b48d9e50e893040bd7bef081bfbff5edfd9",
+  "wk@g10code.com": "5bbf83c70a7700bddc90aa8f5854578d33a86802552e9b79bdd4562fe85f20d7"
  }
 }
