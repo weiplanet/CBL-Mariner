@@ -1,0 +1,10 @@
+{
+    "packages": [
+        "crypto-policies",
+        "dracut",
+        "fipscheck",
+        "libgcrypt-devel",
+        "libkcapi-hmaccalc",
+        "openssl-devel"
+    ]
+}
