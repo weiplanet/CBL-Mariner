@@ -30,7 +30,7 @@ the ability to run some (or all) commands as root or another user while logging 
     --with-all-insults \
     --with-env-editor \
     --with-pam \
-    --with-passprompt="[sudo] password for %p"
+    --with-passprompt="[sudo] password for %p: "
 
 make %{?_smp_mflags}
 
