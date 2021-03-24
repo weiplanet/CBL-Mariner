@@ -44,6 +44,7 @@ Patch21:        openssl-1.1.1-fips-curves.patch
 Patch22:        CVE-2020-1971.patch
 Patch23:        openssl-1.1.1-sp80056arev3.patch
 Patch24:        CVE-2021-3449.patch
+Patch25:        CVE-2021-3450.patch
 BuildRequires:  perl-Test-Warnings
 BuildRequires:  perl-Text-Template
 Requires:       %{name}-libs = %{version}-%{release}
@@ -134,6 +135,7 @@ cp %{SOURCE4} test/
 %patch22 -p1
 %patch23 -p1
 %patch24 -p1
+%patch25 -p1
 
 %build
 # Add -Wa,--noexecstack here so that libcrypto's assembler modules will be
@@ -329,7 +331,7 @@ rm -rf %{buildroot}
 
 %changelog
 * Tue Mar 23 2021 Nicolas Ontiveros <niontive@microsoft.com> - 1.1.1g-15
-- Patch CVE-2021-3449
+- Patch CVE-2021-3449 and CVE-2021-3450
 
 * Wed Mar 17 2021 Nicolas Ontiveros <niontive@microsoft.com> - 1.1.1g-14
 - Fix bugs in SP800-56a Rev.3 patch, including oridinal test
