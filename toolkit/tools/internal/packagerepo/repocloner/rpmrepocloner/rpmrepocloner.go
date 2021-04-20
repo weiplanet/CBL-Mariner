@@ -320,7 +320,6 @@ func (r *RpmRepoCloner) SearchAndClone(cloneDeps bool, singlePackageToClone *pkg
 		if !r.usePreviewRepo {
 			args = append(args, fmt.Sprintf("--disablerepo=%s", previewRepoID))
 		}
-
 		stdout, stderr, err := shell.Execute("tdnf", args...)
 		logger.Log.Debugf("tdnf search for dependency '%s':\n%s", singlePackageToClone.Name, stdout)
 
@@ -357,7 +356,7 @@ func (r *RpmRepoCloner) SearchAndClone(cloneDeps bool, singlePackageToClone *pkg
 func (r *RpmRepoCloner) ConvertDownloadedPackagesIntoRepo() (err error) {
 	srcDir := filepath.Join(r.chroot.RootDir(), chrootDownloadDir)
 	repoDir := srcDir
-
+	logger.Log.Infof("Processing repo dir %v", repoDir)
 	if !buildpipeline.IsRegularBuild() {
 		// Docker based build doesn't use overlay so repo folder
 		// must be explicitely set to the RPMs cache folder
@@ -375,6 +374,7 @@ func (r *RpmRepoCloner) ConvertDownloadedPackagesIntoRepo() (err error) {
 	}
 
 	if !buildpipeline.IsRegularBuild() {
+		logger.Log.Infof("Processing cache repo dir %v", cacheRepoDir)
 		// Docker based build doesn't use overlay so cache repo
 		// must be explicitely initialized
 		err = r.initializeMountedChrootRepo(cacheRepoDir)
@@ -450,10 +450,11 @@ func (r *RpmRepoCloner) clonePackage(baseArgs []string, enabledRepoOrder ...stri
 		return fmt.Errorf("enabledRepoOrder cannot be empty")
 	}
 
-	// Disable all repos first so we can gradually enable them below.
+	// Enable all repos first so that all of the repos (including mariner ones) are available.
+	// Then, start by disabling all of the passed repos, and enabling more as we go.
 	// TDNF processes enable/disable repo requests in the order that they are passed.
 	// So if `--disablerepo=foo` and then `--enablerepo=foo` are passed, `foo` will be enabled.
-	baseArgs = append(baseArgs, "--disablerepo=*")
+	baseArgs = append(baseArgs, "--enablerepo=*")
 
 	var enabledRepoArgs []string
 	for _, repoID := range enabledRepoOrder {
@@ -478,10 +479,23 @@ func (r *RpmRepoCloner) clonePackage(baseArgs []string, enabledRepoOrder ...stri
 			args = append(args, fmt.Sprintf("--disablerepo=%s", previewRepoID))
 		}
 
+		// The rpm cache repository is not mounted for some reason.
 		var (
 			stdout string
 			stderr string
 		)
+		// stdout, stderr, err = shell.Execute("tdnf", "repolist", "-v")
+		// logger.Log.Debugf("stdout: %s", stdout)
+		// logger.Log.Debugf("stderr: %s", stderr)
+		// stdout, stderr, err = shell.Execute("ls", "/etc/yum.repos.d/")
+		// logger.Log.Debugf("stdout: %s", stdout)
+		// logger.Log.Debugf("stderr: %s", stderr)
+		// stdout, stderr, err = shell.Execute("cat", "/etc/yum.repos.d/allrepos.repo")
+		// logger.Log.Debugf("stdout: %s", stdout)
+		// logger.Log.Debugf("stderr: %s", stderr)
+		// stdout, stderr, err = shell.Execute("ls", "/upstream-cached-rpms")
+		// logger.Log.Debugf("stdout: %s", stdout)
+		// logger.Log.Debugf("stderr: %s", stderr)
 		stdout, stderr, err = shell.Execute("tdnf", args...)
 
 		logger.Log.Debugf("stdout: %s", stdout)
