@@ -1,8 +1,8 @@
 %global debug_package %{nil}
-%define uname_r %{version}-rolling-lts-mariner-%{release}
+%define uname_r %{version}-%{release}
 Summary:        Signed Linux Kernel for x86_64 systems
 Name:           kernel-signed-x64
-Version:        5.10.21.1
+Version:        5.10.28.1
 Release:        2%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
@@ -38,16 +38,16 @@ This package contains the Linux kernel package with kernel signed with the produ
 
 %build
 rpm2cpio %{SOURCE0} | cpio -idmv
+cp %{SOURCE1} ./boot/vmlinuz-%{uname_r}
 
 %install
 install -vdm 700 %{buildroot}/boot
 install -vdm 755 %{buildroot}/lib/modules/%{uname_r}
 mkdir -p %{buildroot}/%{_localstatedir}/lib/initramfs/kernel
 
-cp -rp ./boot/* %{buildroot}/boot
-cp -rp ./lib/* %{buildroot}/lib
-cp -rp ./var/* %{buildroot}/%{_localstatedir}
-cp %{SOURCE1} %{buildroot}/boot/vmlinuz-%{uname_r}
+cp -rp ./boot/. %{buildroot}/boot
+cp -rp ./lib/. %{buildroot}/lib
+cp -rp ./var/. %{buildroot}/%{_localstatedir}
 
 %triggerin -- initramfs
 mkdir -p %{_localstatedir}/lib/rpm-state/initramfs/pending
@@ -82,6 +82,19 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %config %{_localstatedir}/lib/initramfs/kernel/%{uname_r}
 
 %changelog
+* Thu Apr 15 2021 Rachel Menge <rachelmenge@microsoft.com> - 5.10.28.1-2
+- Update to kernel release 5.10.28.1-2
+
+* Thu Apr 08 2021 Chris Co <chrco@microsoft.com> - 5.10.28.1-1
+- Update source to 5.10.28.1
+- Update uname_r define to match the new value derived from the source
+
+* Fri Mar 26 2021 Daniel Mihai <dmihai@microsoft.com> - 5.10.21.1-4
+- Update to kernel release 5.10.21.1-4
+
+* Thu Mar 18 2021 Chris Co <chrco@microsoft.com> - 5.10.21.1-3
+- Fix file copy
+
 * Wed Mar 17 2021 Nicolas Ontiveros <niontive@microsoft.com> - 5.10.21.1-2
 - Update to kernel release 5.10.21.1-2
 

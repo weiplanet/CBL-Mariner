@@ -475,8 +475,8 @@
         "type": "other",
         "other": {
           "name": "cairo",
-          "version": "1.16.0",
-          "downloadUrl": "http://cairographics.org/releases/cairo-1.16.0.tar.xz"
+          "version": "1.17.4",
+          "downloadUrl": "https://cairographics.org/snapshots/cairo-1.17.4.tar.xz"
         }
       }
     },
@@ -825,8 +825,8 @@
         "type": "other",
         "other": {
           "name": "curl",
-          "version": "7.74.0",
-          "downloadUrl": "https://curl.haxx.se/download/curl-7.74.0.tar.gz"
+          "version": "7.76.0",
+          "downloadUrl": "https://curl.haxx.se/download/curl-7.76.0.tar.gz"
         }
       }
     },
@@ -1385,8 +1385,8 @@
         "type": "other",
         "other": {
           "name": "git",
-          "version": "2.23.3",
-          "downloadUrl": "https://www.kernel.org/pub/software/scm/git/git-2.23.3.tar.xz"
+          "version": "2.23.4",
+          "downloadUrl": "https://www.kernel.org/pub/software/scm/git/git-2.23.4.tar.xz"
         }
       }
     },
@@ -1595,8 +1595,18 @@
         "type": "other",
         "other": {
           "name": "grub2",
-          "version": "2.02",
-          "downloadUrl": "ftp://ftp.gnu.org/gnu/grub/grub-2.02.tar.xz"
+          "version": "2.06~rc1",
+          "downloadUrl": "https://git.savannah.gnu.org/cgit/grub.git/snapshot/grub-2.06-rc1.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
+          "name": "gnulib",
+          "version": "d271f868a8df9bbec29049d01e056481b7a1a263",
+          "downloadUrl": "https://git.savannah.gnu.org/cgit/gnulib.git/snapshot/gnulib-d271f868a8df9bbec29049d01e056481b7a1a263.tar.gz"
         }
       }
     },
@@ -1735,8 +1745,8 @@
         "type": "other",
         "other": {
           "name": "hyperv-daemons",
-          "version": "5.10.21.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.21.1.tar.gz"
+          "version": "5.10.28.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.28.1.tar.gz"
         }
       }
     },
@@ -1765,8 +1775,8 @@
         "type": "other",
         "other": {
           "name": "icu",
-          "version": "64.2.0.2",
-          "downloadUrl": "https://github.com/microsoft/icu/archive/v64.2.0.2.tar.gz"
+          "version": "68.2.0.6",
+          "downloadUrl": "https://github.com/microsoft/icu/archive/v68.2.0.6.tar.gz"
         }
       }
     },
@@ -2045,8 +2055,8 @@
         "type": "other",
         "other": {
           "name": "kernel-headers",
-          "version": "5.10.21.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.21.1.tar.gz"
+          "version": "5.10.28.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.28.1.tar.gz"
         }
       }
     },
@@ -2055,8 +2065,8 @@
         "type": "other",
         "other": {
           "name": "kernel-hyperv",
-          "version": "5.10.21.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.21.1.tar.gz"
+          "version": "5.10.28.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.28.1.tar.gz"
         }
       }
     },
@@ -2065,8 +2075,8 @@
         "type": "other",
         "other": {
           "name": "kernel",
-          "version": "5.10.21.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.21.1.tar.gz"
+          "version": "5.10.28.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.28.1.tar.gz"
         }
       }
     },
@@ -2196,7 +2206,7 @@
         "other": {
           "name": "kubernetes",
           "version": "1.18.14",
-          "downloadUrl": "https://kubernetesartifacts.azureedge.net/kubernetes/v1.18.14-hotfix.20210310/binaries/kubernetes-node-linux-amd64.tar.gz"
+          "downloadUrl": "https://kubernetesartifacts.azureedge.net/kubernetes/v1.18.14-hotfix.20210322/binaries/kubernetes-node-linux-amd64.tar.gz"
         }
       }
     },
@@ -3345,8 +3355,8 @@
         "type": "other",
         "other": {
           "name": "mariadb",
-          "version": "10.3.17",
-          "downloadUrl": "https://github.com/MariaDB/server/archive/mariadb-10.3.17.tar.gz"
+          "version": "10.3.28",
+          "downloadUrl": "https://github.com/MariaDB/server/archive/mariadb-10.3.28.tar.gz"
         }
       }
     },
@@ -3425,8 +3435,8 @@
         "type": "other",
         "other": {
           "name": "moby-cli",
-          "version": "19.03.11+azure",
-          "downloadUrl": "https://github.com/docker/cli/archive/v19.03.11.tar.gz"
+          "version": "19.03.15+azure",
+          "downloadUrl": "https://github.com/docker/cli/archive/v19.03.15.tar.gz"
         }
       }
     },
@@ -3445,8 +3455,8 @@
         "type": "other",
         "other": {
           "name": "moby-engine",
-          "version": "19.03.11+azure",
-          "downloadUrl": "https://github.com/moby/moby/archive/v19.03.11.tar.gz"
+          "version": "19.03.15+azure",
+          "downloadUrl": "https://github.com/moby/moby/archive/v19.03.15.tar.gz"
         }
       }
     },
@@ -3605,8 +3615,8 @@
         "type": "other",
         "other": {
           "name": "nettle",
-          "version": "3.4.1",
-          "downloadUrl": "https://ftp.gnu.org/gnu/nettle/nettle-3.4.1.tar.gz"
+          "version": "3.7.2",
+          "downloadUrl": "https://ftp.gnu.org/gnu/nettle/nettle-3.7.2.tar.gz"
         }
       }
     },
@@ -3875,8 +3885,8 @@
         "type": "other",
         "other": {
           "name": "openssl",
-          "version": "1.1.1g",
-          "downloadUrl": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz"
+          "version": "1.1.1k",
+          "downloadUrl": "https://www.openssl.org/source/openssl-1.1.1k.tar.gz"
         }
       }
     },
@@ -3895,8 +3905,8 @@
         "type": "other",
         "other": {
           "name": "openvswitch",
-          "version": "2.12.0",
-          "downloadUrl": "http://openvswitch.org/releases/openvswitch-2.12.0.tar.gz"
+          "version": "2.12.3",
+          "downloadUrl": "http://openvswitch.org/releases/openvswitch-2.12.3.tar.gz"
         }
       }
     },
@@ -6445,8 +6455,8 @@
         "type": "other",
         "other": {
           "name": "shim-unsigned-aarch64",
-          "version": "15",
-          "downloadUrl": "https://github.com/rhboot/shim/releases/download/15/shim-15.tar.bz2"
+          "version": "15.4",
+          "downloadUrl": "https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2"
         }
       }
     },
@@ -6455,8 +6465,8 @@
         "type": "other",
         "other": {
           "name": "shim-unsigned-x64",
-          "version": "15",
-          "downloadUrl": "https://github.com/rhboot/shim/releases/download/15/shim-15.tar.bz2"
+          "version": "15.4",
+          "downloadUrl": "https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2"
         }
       }
     },
@@ -6855,8 +6865,8 @@
         "type": "other",
         "other": {
           "name": "tzdata",
-          "version": "2019c",
-          "downloadUrl": "https://data.iana.org/time-zones/releases/tzdata2019c.tar.gz"
+          "version": "2021a",
+          "downloadUrl": "https://data.iana.org/time-zones/releases/tzdata2021a.tar.gz"
         }
       }
     },
