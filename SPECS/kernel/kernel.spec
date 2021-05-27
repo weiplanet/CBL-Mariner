@@ -4,7 +4,7 @@
 Summary:        Linux Kernel
 Name:           kernel
 Version:        5.10.32.1
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -162,6 +162,7 @@ Patch1132:      CVE-2021-23133.nopatch
 Patch1133:      CVE-2021-29154.nopatch
 # CVE-2021-30178 - Introducing commit not in stable tree. No fix necessary at this time.
 Patch1134:      CVE-2021-30178.nopatch
+Patch2000:      disable_CONFIG_STRICT_KERNEL_RWX.patch
 BuildRequires:  audit-devel
 BuildRequires:  bash
 BuildRequires:  bc
@@ -262,6 +263,8 @@ This package contains common device tree blobs (dtb)
 
 %prep
 %setup -q -n CBL-Mariner-Linux-Kernel-rolling-lts-mariner-%{version}
+
+%patch2000 -p1
 
 %build
 make mrproper
@@ -489,6 +492,9 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %endif
 
 %changelog
+* Thu May 27 2021 Daniel Mihai <dmihai@microsoft.com> - 5.10.32.1-6
+- Temporarily allow the kernel debugger to change read-only kernel data
+
 * Tue May 25 2021 Daniel Mihai <dmihai@microsoft.com> - 5.10.32.1-5
 - Enable kernel debugger
 
