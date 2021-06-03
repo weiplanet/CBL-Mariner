@@ -3,7 +3,7 @@
 Summary:        Libxml2
 Name:           libxml2
 Version:        2.9.10
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -105,6 +105,9 @@ rm -rf %{buildroot}/*
 %{_libdir}/cmake/libxml2/libxml2-config.cmake
 
 %changelog
+* Thu Jul 03 2021 Mateusz Malisz <mamalisz@microsoft.com> - 2.9.10-5
+- Artificial bump
+
 * Wed Mar 03 2021 Andrew Phelps <anphel@microsoft.com> - 2.9.10-4
 - Skip python tests which are known to be broken.
 
