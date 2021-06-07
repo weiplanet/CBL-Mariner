@@ -1,7 +1,7 @@
 Summary:        CBL-Mariner repo files, gpg keys
 Name:           mariner-repos
 Version:        1.0
-Release:        13%{?dist}
+Release:        14%{?dist}
 License:        Apache License
 Group:          System Environment/Base
 URL:            https://aka.ms/mariner
@@ -16,6 +16,8 @@ Source5:        mariner-ui.repo
 Source6:        mariner-ui-preview.repo
 Source7:        mariner-extras.repo
 Source8:        mariner-extras-preview.repo
+Source9:        mariner-microsoft.repo
+Source10:       mariner-microsoft-preview.repo
 
 Requires(post):  gpgme
 Requires(post):  rpm
@@ -76,6 +78,8 @@ install -m 644 %{SOURCE5} $REPO_DIRECTORY
 install -m 644 %{SOURCE6} $REPO_DIRECTORY
 install -m 644 %{SOURCE7} $REPO_DIRECTORY
 install -m 644 %{SOURCE8} $REPO_DIRECTORY
+install -m 644 %{SOURCE9} $REPO_DIRECTORY
+install -m 644 %{SOURCE10} $REPO_DIRECTORY
 
 export RPM_GPG_DIRECTORY="$RPM_BUILD_ROOT/etc/pki/rpm-gpg"
 
@@ -124,7 +128,17 @@ gpg --batch --yes --delete-keys 2BC94FFF7015A5F28F1537AD0CD9FED33135CE90
 %defattr(-,root,root,-)
 %config(noreplace) /etc/yum.repos.d/mariner-extras-preview.repo
 
+%files microsoft
+%defattr(-,root,root,-)
+%config(noreplace) /etc/yum.repos.d/mariner-microsoft.repo
+
+%files microsoft-preview
+%defattr(-,root,root,-)
+%config(noreplace) /etc/yum.repos.d/mariner-microsoft-preview.repo
+
 %changelog
+*   Mon Jun 07 2021 Jon Slobodzian <joslobo@microsoft.com> - 1.0-14
+-   Add creation of Microsoft preview and production package repos.
 *   Fri Feb 19 2021 Mateusz Malisz <mamalisz@microsoft.com> - 1.0-13
 -   Add extras repo.
 -   Add extras-preview repo.
