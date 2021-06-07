@@ -4,7 +4,7 @@
 Summary:        Linux Kernel
 Name:           kernel
 Version:        5.10.37.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -503,6 +503,9 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %endif
 
 %changelog
+* Mon Jun 07 2021 Nicolas Ontiveros <niontive@microsoft.com> - 5.10.37.1-2
+- Enable CONFIG_GDB_SCRIPTS
+
 * Fri May 28 2021 Rachel Menge <rachelmenge@microsoft.com> - 5.10.37.1-1
 - Update source to 5.10.37.1
 - Address CVE-2021-23134, CVE-2021-29155, CVE-2021-31829, CVE-2021-31916, 
