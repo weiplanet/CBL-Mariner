@@ -41,6 +41,9 @@
 %{set_build_flags}\
 %{nil}
 
+# Enable zstd level 19 compression for RPMs
+%_binary_payload w19.zstdio
+
 #
 ## Automatically compile python files
 %py_auto_byte_compile 1

@@ -6,7 +6,7 @@
 Summary:        Mariner specific rpm macro files
 Name:           mariner-rpm-macros
 Version:        1.0
-Release:        17%{?dist}
+Release:        18%{?dist}
 License:        GPL+ AND MIT
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -112,6 +112,9 @@ install -p -m 644 -t %{buildroot}%{rcluadir}/srpm forge.lua
 %{_rpmconfigdir}/macros.d/macros.check
 
 %changelog
+* Tue Jun 08 2021 Thomas Crain <thcrain@microsoft.com> - 1.0-18
+- Enable zstd level 19 compression for RPMs
+
 * Tue Jun 01 2021 Pawel Winogrodzki <pawelwi@microsoft.com> - 1.0-17
 - Adding font macros from the "fontpackages-devel" package.
 

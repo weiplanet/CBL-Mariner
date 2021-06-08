@@ -34,6 +34,8 @@
 %_enable_debug_packages 1
 %_include_minidebuginfo 1
 %_use_internal_dependency_generator 1
+%_binary_payload w19.zstdio
+
 
 %__os_install_post    \
     %{_rpmconfigdir}/brp-compress \
