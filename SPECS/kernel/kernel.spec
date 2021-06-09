@@ -4,7 +4,7 @@
 Summary:        Linux Kernel
 Name:           kernel
 Version:        5.10.37.1
-Release:        1%{?dist}
+Release:        100%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -173,6 +173,7 @@ Patch1141:      CVE-2021-33034.nopatch
 Patch1142:      CVE-2021-3483.nopatch
 Patch1143:      CVE-2021-3501.nopatch
 Patch1144:      CVE-2021-3506.nopatch
+Patch2000:      corrupt-rsa_tv_template.patch
 BuildRequires:  audit-devel
 BuildRequires:  bash
 BuildRequires:  bc
@@ -273,6 +274,8 @@ This package contains common device tree blobs (dtb)
 
 %prep
 %setup -q -n CBL-Mariner-Linux-Kernel-rolling-lts-mariner-%{version}
+
+%patch2000 -p1
 
 %build
 make mrproper
