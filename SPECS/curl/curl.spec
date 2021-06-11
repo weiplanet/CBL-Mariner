@@ -1,7 +1,7 @@
 Summary:        An URL retrieval utility and library
 Name:           curl
 Version:        7.76.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -29,6 +29,7 @@ functions like streaming media.
 %package devel
 Summary:        Libraries and header files for curl
 Requires:       %{name} = %{version}-%{release}
+Provides:       libcurl-devel = %{version}-%{release}
 
 %description devel
 Static libraries and header files for the support library for curl
