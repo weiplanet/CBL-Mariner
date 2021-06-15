@@ -1,0 +1,48 @@
+diff --git a/doc/CMakeLists.txt b/doc/CMakeLists.txt
+index 06848450..8e5e8a83 100644
+--- a/doc/CMakeLists.txt
++++ b/doc/CMakeLists.txt
+@@ -5,10 +5,11 @@ if (NOT DOXYGEN)
+ endif ()
+ 
+ find_package(PythonInterp QUIET REQUIRED)
++find_program(SPHINX_EXECUTABLE NAMES sphinx-build sphinx-build-3)
+ 
+ add_custom_target(doc
+   COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/build.py
+-                               ${FMT_VERSION}
++                               ${SPHINX_EXECUTABLE} ${FMT_VERSION}
+   SOURCES api.rst syntax.rst usage.rst build.py conf.py _templates/layout.html)
+ 
+ include(GNUInstallDirs)
+diff --git a/doc/build.py b/doc/build.py
+index 59a7b498..8562d1bf 100755
+--- a/doc/build.py
++++ b/doc/build.py
+@@ -7,7 +7,7 @@ from subprocess import check_call, check_output, CalledProcessError, Popen, PIPE
+ 
+ versions = ['1.0.0', '1.1.0', '2.0.0', '3.0.2', '4.0.0', '4.1.0', '5.0.0', '5.1.0', '5.2.0', '5.2.1', '5.3.0', '6.0.0', '6.1.0', '6.1.1', '6.1.2', '6.2.0', '6.2.1', '7.0.0', '7.0.1', '7.0.2', '7.0.3', '7.1.0', '7.1.1', '7.1.2', '7.1.3']
+ 
+-def build_docs(version='dev', **kwargs):
++def build_docs(sphinx_executable='sphinx-build', version='dev', **kwargs):
+   doc_dir = kwargs.get('doc_dir', os.path.dirname(os.path.realpath(__file__)))
+   work_dir = kwargs.get('work_dir', '.')
+   include_dir = kwargs.get(
+@@ -50,7 +50,7 @@ def build_docs(version='dev', **kwargs):
+     raise CalledProcessError(p.returncode, cmd)
+   html_dir = os.path.join(work_dir, 'html')
+   main_versions = reversed(versions[-3:])
+-  check_call(['sphinx-build',
++  check_call([sphinx_executable,
+               '-Dbreathe_projects.format=' + os.path.abspath(doxyxml_dir),
+               '-Dversion=' + version, '-Drelease=' + version,
+               '-Aversion=' + version, '-Aversions=' + ','.join(main_versions),
+@@ -69,4 +69,4 @@ def build_docs(version='dev', **kwargs):
+   return html_dir
+ 
+ if __name__ == '__main__':
+-  build_docs(sys.argv[1])
++  build_docs(sys.argv[1], sys.argv[2])
+-- 
+2.28.0
+
