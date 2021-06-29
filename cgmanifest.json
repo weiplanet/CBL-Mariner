@@ -564,6 +564,16 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "checkpolicy",
+          "version": "2.9",
+          "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/checkpolicy-2.9.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "chkconfig",
           "version": "1.11",
           "downloadUrl": "https://github.com/fedora-sysv/chkconfig/archive/1.11.tar.gz"
@@ -687,6 +697,16 @@
           "name": "cni",
           "version": "0.7.5",
           "downloadUrl": "https://github.com/containernetworking/plugins/archive/v0.7.5.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
+          "name": "collectd",
+          "version": "5.12.0",
+          "downloadUrl": "https://github.com/collectd/collectd/releases/download/collectd-5.12.0/collectd-5.12.0.tar.bz2"
         }
       }
     },
@@ -1585,8 +1605,8 @@
         "type": "other",
         "other": {
           "name": "golang",
-          "version": "1.15.11",
-          "downloadUrl": "https://dl.google.com/go/go1.15.11.src.tar.gz"
+          "version": "1.15.13",
+          "downloadUrl": "https://dl.google.com/go/go1.15.13.src.tar.gz"
         }
       }
     },
@@ -1845,8 +1865,8 @@
         "type": "other",
         "other": {
           "name": "hyperv-daemons",
-          "version": "5.10.37.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.37.1.tar.gz"
+          "version": "5.10.42.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.42.1.tar.gz"
         }
       }
     },
@@ -2145,8 +2165,8 @@
         "type": "other",
         "other": {
           "name": "kernel-headers",
-          "version": "5.10.37.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.37.1.tar.gz"
+          "version": "5.10.42.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.42.1.tar.gz"
         }
       }
     },
@@ -2155,8 +2175,8 @@
         "type": "other",
         "other": {
           "name": "kernel-hyperv",
-          "version": "5.10.37.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.37.1.tar.gz"
+          "version": "5.10.42.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.42.1.tar.gz"
         }
       }
     },
@@ -2165,8 +2185,8 @@
         "type": "other",
         "other": {
           "name": "kernel",
-          "version": "5.10.37.1",
-          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.37.1.tar.gz"
+          "version": "5.10.42.1",
+          "downloadUrl": "https://github.com/microsoft/CBL-Mariner-Linux-Kernel/archive/rolling-lts/mariner/5.10.42.1.tar.gz"
         }
       }
     },
@@ -2984,6 +3004,16 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "libsemanage",
+          "version": "2.9",
+          "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/libsemanage-2.9.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "libsepol",
           "version": "2.9",
           "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/libsepol-2.9.tar.gz"
@@ -3544,6 +3574,16 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "mcstrans",
+          "version": "2.9",
+          "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/mcstrans-2.9.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "mercurial",
           "version": "5.4",
           "downloadUrl": "https://www.mercurial-scm.org/release/mercurial-5.4.tar.gz"
@@ -3835,8 +3875,8 @@
         "type": "other",
         "other": {
           "name": "nginx",
-          "version": "1.16.1",
-          "downloadUrl": "https://nginx.org/download/nginx-1.16.1.tar.gz"
+          "version": "1.20.1",
+          "downloadUrl": "https://nginx.org/download/nginx-1.20.1.tar.gz"
         }
       }
     },
@@ -3875,8 +3915,8 @@
         "type": "other",
         "other": {
           "name": "nodejs",
-          "version": "8.11.4",
-          "downloadUrl": "https://nodejs.org/download/release/v8.11.4/node-v8.11.4.tar.xz"
+          "version": "8.17.0",
+          "downloadUrl": "https://nodejs.org/download/release/v8.17.0/node-v8.17.0.tar.xz"
         }
       }
     },
@@ -3885,8 +3925,8 @@
         "type": "other",
         "other": {
           "name": "nodejs",
-          "version": "9.11.2",
-          "downloadUrl": "https://nodejs.org/download/release/v9.11.2/node-v9.11.2.tar.xz"
+          "version": "14.17.0",
+          "downloadUrl": "https://nodejs.org/download/release/v14.17.0/node-v14.17.0.tar.xz"
         }
       }
     },
@@ -4634,6 +4674,16 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "policycoreutils",
+          "version": "2.9",
+          "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/policycoreutils-2.9.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "polkit",
           "version": "0.116",
           "downloadUrl": "https://www.freedesktop.org/software/polkit/releases/polkit-0.116.tar.gz"
@@ -4655,8 +4705,8 @@
         "type": "other",
         "other": {
           "name": "postgresql",
-          "version": "12.6",
-          "downloadUrl": "https://ftp.postgresql.org/pub/source/v12.6/postgresql-12.6.tar.bz2"
+          "version": "12.7",
+          "downloadUrl": "https://ftp.postgresql.org/pub/source/v12.7/postgresql-12.7.tar.bz2"
         }
       }
     },
@@ -5924,6 +5974,16 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "re2",
+          "version": "20190801",
+          "downloadUrl": "https://github.com/google/re2/archive/2019-08-01.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "readline",
           "version": "7.0",
           "downloadUrl": "http://ftp.gnu.org/gnu/readline/readline-7.0.tar.gz"
@@ -6854,9 +6914,39 @@
       "component": {
         "type": "other",
         "other": {
+          "name": "secilc",
+          "version": "2.9",
+          "downloadUrl": "https://github.com/SELinuxProject/selinux/releases/download/20190315/secilc-2.9.tar.gz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
           "name": "sed",
           "version": "4.5",
           "downloadUrl": "http://ftp.gnu.org/gnu/sed/sed-4.5.tar.xz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
+          "name": "selinux-policy",
+          "version": "2.20200818",
+          "downloadUrl": "https://github.com/SELinuxProject/refpolicy/releases/download/RELEASE_2_20200818/refpolicy-2.20200818.tar.bz2"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
+          "name": "setools",
+          "version": "4.2.2",
+          "downloadUrl": "https://github.com/SELinuxProject/setools/releases/download/4.2.2/setools-4.2.2.tar.bz2"
         }
       }
     },
@@ -7597,6 +7687,16 @@
           "name": "xz",
           "version": "5.2.4",
           "downloadUrl": "http://tukaani.org/xz/xz-5.2.4.tar.xz"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "other",
+        "other": {
+          "name": "yajl",
+          "version": "2.1.0",
+          "downloadUrl": "https://github.com/lloyd/yajl/archive/2.1.0.tar.gz"
         }
       }
     },
